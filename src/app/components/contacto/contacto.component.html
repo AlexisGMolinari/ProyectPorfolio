@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <script src="https://kit.fontawesome.com/46b7ceee20.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="./dashboard">Inicio</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Navegación
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="/proyectos">Proyectos</a></li>
+                      <li><a class="dropdown-item" href="/almacenamiento">Almacenamiento</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="/contacto">Contacto</a></li>
+                    </ul>
+                  </li>
+                </ul>
+                <form class="d-flex" role="search">
+                  <input class="form-control me-2" type="search" placeholder="Escriba aquí..." aria-label="Search">
+                  <button class="btn btn-outline-success" type="submit">Buscar</button>
+                </form>
+              </div>
+            </div>
+          </nav>
+    </header>
+
+    <section class="form_wrap">
+      <aside class="contact_info">
+          <article class="info_title">
+              <span class="fa fa-user-circle"></span>
+              <h2>
+                  <br>INFORMACIÓN
+                  <br>DE CONTACTO
+              </h2>
+          </article>
+          <article class="info_items">
+              <p>
+                  <span class="fa fa-envelope"></span>
+                  alexis.g.molinari&#64;hotmail.com
+                  <br>
+                  <span class="fa fa-mobile"></span>
+                  +(54) 3534-191-311
+              </p>
+          </article>
+      </aside>
+      <div class="form_contact_wrapper">
+        <form class="form_contact" (ngSubmit)="onSubmit()">
+          <h2>Envía un mensaje</h2>
+          <div class="user_info">
+            <label for="names">Nombres*</label>
+            <input type="text" id="names" name="names" [(ngModel)]="contact.names" required>
+        
+            <label for="phone">Teléfono/Móvil</label>
+            <input type="tel" id="phone" name="phone" [(ngModel)]="contact.phone">
+        
+            <label for="email">Email*</label>
+            <input type="email" id="email" name="email" [(ngModel)]="contact.email" required>
+        
+            <div class="radio_group">
+              <input type="radio" id="personal" name="inquiry_type" value="Personal" [(ngModel)]="contact.inquiry_type">
+              <label for="personal">Personal</label>
+              <input type="radio" id="empresa" name="inquiry_type" value="Empresa" [(ngModel)]="contact.inquiry_type">
+              <label for="empresa">Empresa</label>
+            </div>
+        
+            <label for="message">Mensaje*</label>
+            <textarea id="message" name="message" [(ngModel)]="contact.message" required></textarea>
+        
+            <input type="submit" value="Enviar Mensaje" id="btnSend">
+          </div>
+        </form>
+          <div class="additional_text">
+              <h3><b> CONTACTO</b></h3><br>
+              <h2>HABLE CON NOSOTROS</h2>
+              <p> Estoy aquí para ayudarte a llevar tu negocio al <br></p>
+              <p> siguiente nivel con soluciones de software <br></p>
+              <p> personalizadas y servicios de hosting confiables. <br></p>
+              <p> Completa el formulario a continuación para que <br></p>
+              <p> pueda ponerme en contacto contigo y discutir <br></p>
+              <p> cómo puedo satisfacer tus necesidades específicas. <br><br></p>
+              <p> ¡Responderemos en menos de 24 horas! <br></p>
+              <p> ¡Estamos dispuestos para ayudarte a alcanzar tus objetivos! <br></p>
+          </div>
+      </div>
+  </section>
+
+    <div *ngIf="errorMessage" class="modal_wrap">
+      <div class="mensaje_modal">
+        <h3>Errores encontrados</h3>
+        <div [innerHTML]="errorMessage"></div>
+        <button (click)="closeModal()" id="btnClose">Cerrar</button>
+      </div>
+    </div>
+
+
+
+
+    <footer>
+        <div class="social-icon-list">
+          <div class="icon-group" onclick="window.open('https://www.linkedin.com/in/alexis-gabriel-molinari-584253217', '_blank');">
+            <i class="fab fa-linkedin"></i>
+            <span class="icon-text">
+              LinkedIn
+            </span>
+            <span class="icon-bg"></span>
+          </div>
+          <div class="icon-group" onclick="window.open('https://www.instagram.com/alexismolinari98/', '_blank');">
+            <i class="fab fa-instagram"></i>
+            <span class="icon-text">
+              Instagram
+            </span>
+            <span class="icon-bg"></span>
+          </div>
+          <div class="icon-group" onclick="window.open('https://wa.link/u5ldy0', '_blank');">
+            <i class="fab fa-whatsapp"></i>
+            <span class="icon-text">
+              Whatsapp
+            </span>
+            <span class="icon-bg"></span>
+          </div>
+        </div>
+      </footer>
+      
+      
+  </body>
+  </html>

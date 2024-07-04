@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/46b7ceee20.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="./dashboard">Inicio</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Navegación
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="../proyectos/">Proyectos</a></li>
+                      <li><a class="dropdown-item" href="../almacenamiento/">Almacenamiento</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="../contacto/">Contacto</a></li>
+                    </ul>
+                  </li>
+                </ul>
+                <form class="d-flex" role="search">
+                  <input class="form-control me-2" type="search" placeholder="Escriba aquí..." aria-label="Search">
+                  <button class="btn btn-outline-success" type="submit">Buscar</button>
+                </form>
+              </div>
+            </div>
+          </nav>
+    </header>
+
+    <main class="container">
+        <p>Hola 👋 soy Alexis Grabriel Molinari</p>
+        <section class="animation">
+          <div class="first"><div>Web Developer</div></div>
+          <div class="second"><div>Full Stack Node.js</div></div>
+          <div class="third"><div>Téc. Sup. en Desarrollo de Software</div></div>
+        </section>
+      </main>
+
+      <div class="card-section-body">
+        <div class="cartas">
+            <div class="card" (click)="navigateTo('proyectos')">
+                <img class="card-image1">
+                <span class="card-text">Proyectos</span>
+            </div>
+            <div class="card" (click)="navigateTo('almacenamiento')">
+                <img class="card-image2">
+                <span class="card-text">Almacenamiento</span>
+            </div>
+            <div class="card" (click)="navigateTo('contacto')">
+                <img class="card-image3">
+                <span class="card-text">Contacto</span>
+            </div>
+        </div>
+    </div>
+    
+      
+      
+
+
+
+
+    <footer>
+      <div class="social-icon-list">
+        <div class="icon-group" onclick="window.open('https://www.linkedin.com/in/alexis-gabriel-molinari-584253217', '_blank');">
+          <i class="fab fa-linkedin"></i>
+          <span class="icon-text">
+            LinkedIn
+          </span>
+          <span class="icon-bg"></span>
+        </div>
+        <div class="icon-group" onclick="window.open('https://www.instagram.com/alexismolinari98/', '_blank');">
+          <i class="fab fa-instagram"></i>
+          <span class="icon-text">
+            Instagram
+          </span>
+          <span class="icon-bg"></span>
+        </div>
+        <div class="icon-group" onclick="window.open('https://wa.link/u5ldy0', '_blank');">
+          <i class="fab fa-whatsapp"></i>
+          <span class="icon-text">
+            Whatsapp
+          </span>
+          <span class="icon-bg"></span>
+        </div>
+      </div>
+    </footer>
+    
+    
+</body>
+</html>
